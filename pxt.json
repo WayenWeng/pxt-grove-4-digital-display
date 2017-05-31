@@ -1,0 +1,18 @@
+{
+    "name": "Grove-4-Digital-Display",
+    "version": "0.0.1",
+    "description": "Driver for Seeed Studio Grove - 4 Digital Display",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": false
+}
