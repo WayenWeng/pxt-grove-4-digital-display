@@ -1,5 +1,5 @@
 
-let TubeTab: number [] = [0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71] // 0~9,A,b,C,d,E,F
+let TubeTab: number [] = [0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07,0x7f,0x6f,0x77,0x7c,0x39,0x5e,0x79,0x71]
 
 /**
  * Point display switch
@@ -95,7 +95,7 @@ namespace Grove_4_Digital_Display
          * Show a 4 bit number on display
          * @param dispData value of number
          */
-        //% blockId=tm1637_display_number block="%strip|dispData %dispData"
+        //% blockId=tm1637_display_number block="%strip|data %dispData"
         show(dispData: number)
         {       
             if(dispData < 10)
@@ -143,7 +143,7 @@ namespace Grove_4_Digital_Display
          * @param bitAddr value of bit number
          * @param dispData value of number
          */
-        //% blockId=tm1637_display_bit block="%strip|bitAddr %bitAddr|dispData %dispData"
+        //% blockId=tm1637_display_bit block="%strip|bit %bitAddr|data %dispData"
         //% parts="Grove_4_Digital_Display" advanced=true
         bit(bitAddr: number, dispData: number)
         {
@@ -165,7 +165,7 @@ namespace Grove_4_Digital_Display
          * On or off point display
          * @param pointEn value of point switch
          */
-        //% blockId=tm1637_display_point block="%strip|pointEn %pointEn"
+        //% blockId=tm1637_display_point block="%strip|point %pointEn"
         //% parts="Grove_4_Digital_Display" advanced=true
         point(pointEn: PointMode)
         {
@@ -175,7 +175,7 @@ namespace Grove_4_Digital_Display
         /**
          * Clear display
          */
-        //% blockId=tm1637_display_clear
+        //% blockId=tm1637_display_clear block="%strip|clear"
         //% parts="Grove_4_Digital_Display" advanced=true
         clear()
         {
@@ -191,7 +191,7 @@ namespace Grove_4_Digital_Display
      * @param clkPin value of clk pin number
      * @param dataPin value of data pin number
      */
-    //% blockId=tm1637_create block="create clkPin %clkPin|dataPin %dataPin"
+    //% blockId=tm1637_create block="create clk %clkPin|sda %dataPin"
     export function create(clkPin: DigitalPin, dataPin: DigitalPin): TM1637
     {
         let display = new TM1637();
